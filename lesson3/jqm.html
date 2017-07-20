@@ -10,7 +10,12 @@
         <script src="js/jquery-2.0.0.min.js"></script>		
         <script src="js/jquery.mobile-1.4.5.min.js" type="application/x-javascript" charset="utf-8"></script>
         <script src="js/camera.js"></script>
+        <script src="js/savefile.js"></script>
+        <script src="js/wi_fi.js"></script>
+        <script src="js/vibro.js"></script>
+        <script src="js/bt.js"></script>
         
+                       
 		<script>		
 
 			window.addEventListener('tizenhwkey', function onTizenHwKey(e) {
@@ -31,12 +36,28 @@
 					<li><a href="#search">Поиск</a></li>
 					<li><a href="#contact">Связаться с нами</a></li>
 					<li><a href="#cam1">Камера</a></li>
+					<li><a href="#file1">Файл</a></li>
 				</ul>
 			</div>
 			<div data-role="footer">
 				Footer Footer
 			</div>
 		</div>		
+
+
+
+		<div data-role="page" id="file1" data-theme="a">
+			<div data-role="header" >
+				<h1>Файл</h1>
+			</div>
+			<div data-role="content" >	
+				<h1>Файл</h1>
+				<button onclick="writeTestFile()">Записать в файл</button>
+			</div>
+
+		</div>
+		
+
 
 		<div data-role="page" id="cam1" data-theme="a">
 			<div data-role="header" >
@@ -80,7 +101,7 @@
 					<input type="range" name="slider" id="slider" value="0" min="-50" max="50" />	
 					<p/>
 					<label for="slider2">Значение:</label>
-					<select name="slider2" id="slider2" data-role="slider">
+					<select name="slider2" id="slider2" data-role="slider" onchange="bt()">
 						<option value="off">off</option>
 						<option value="on">on</option>
 					</select> 
@@ -90,7 +111,15 @@
 						<option value="a">A</option>
 						<option value="b">B</option>
 						<option value="c">C</option>
-					</select>						
+					</select>
+					<!-- <h1>Wi-Fi:</h1>
+					<div class="connection-status" id="wifi"></div> -->
+					<br>
+					<button onclick="onetime()">Single</button>				
+					<button onclick="melody()">Melody</button>				
+					<button onclick="stopVib()">Stop</button>
+					
+									
 				</div>	
 			</div>
 
