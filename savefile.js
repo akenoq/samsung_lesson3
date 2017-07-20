@@ -1,5 +1,3 @@
-
-
 function writeTestFile(){
 
 	 var documentsDir;
