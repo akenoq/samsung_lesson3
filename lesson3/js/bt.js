@@ -90,5 +90,8 @@ function onOffBT() {
     		};
         };
         
+function bt() {
+	
+};        
 
 
